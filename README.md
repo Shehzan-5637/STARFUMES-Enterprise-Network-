@@ -1,6 +1,3 @@
-# STARFUMES-Enterprise-Network-
-Cisco Packet Tracer simulation of a small enterprise network for STARFUMES, demonstrating LAN/WAN segmentation, DHCP, DNS, and inter-subnet routing.
-
 # 🌐 STARFUMES Small Enterprise Network – Cisco Packet Tracer
 
 A simulated **Small Enterprise Network** for STARFUMES, designed in **Cisco Packet Tracer**, demonstrating real-world LAN/WAN segmentation, DHCP/DNS configuration, and inter-subnet routing for a small-to-medium enterprise (SME).
@@ -40,11 +37,11 @@ To gain hands-on experience in designing, configuring, and verifying a multi-sit
 Design and implement a small enterprise network with:
 
 1. **Network Segmentation:** Two subnets
-   - Head Office: `192.168.1.0/24`
-   - Client Network: `192.168.2.0/24`
+   - Head Office: 192.168.1.0/24
+   - Client Network: 192.168.2.0/24
 2. **Automated Addressing:** DHCP for all end devices
 3. **Inter-VLAN/Subnet Routing:** Full IP connectivity across subnets
-4. **Web and DNS:** Access the Web Server using the domain name `starfumes`
+4. **Web and DNS:** Access the Web Server using the domain name starfumes
 
 ---
 
@@ -54,23 +51,23 @@ Design and implement a small enterprise network with:
 
 - **Equipment:** Switch, Router, Servers (DHCP, DNS, Web)  
 - **IP Assignments:**
-  - Router (Gig0/0): `192.168.1.5`
-  - DHCP Server: `192.168.1.1`
-  - DNS Server: `192.168.1.2`
-  - Web Server: `192.168.1.3`
-- **Services:** DHCP, DNS mapping (`starfumes → 192.168.1.3`), Web server
+  - Router (Gig0/0): 192.168.1.5
+  - DHCP Server: 192.168.1.1
+  - DNS Server: 192.168.1.2
+  - Web Server: 192.168.1.3
+- **Services:** DHCP, DNS mapping (starfumes → 192.168.1.3), Web server
 
 **Client LAN (192.168.2.0/24)**
 
 - **Equipment:** PCs, Laptops, Smartphones, Router, AP, DSL Modem  
-- **IP Assignments:** Dynamic via DHCP; Client Router (Gig0/0): `192.168.2.2`
+- **IP Assignments:** Dynamic via DHCP; Client Router (Gig0/0): 192.168.2.2
 
 **WAN Backbone (192.168.3.0/24)**
 
 - **Connection:** Head Office ↔ Cloud ↔ Client LAN  
 - **IP Assignments:**  
-  - Head Office Router (Gig0/1): `192.168.3.1`  
-  - Client DSL Modem: `192.168.3.2`  
+  - Head Office Router (Gig0/1): 192.168.3.1  
+  - Client DSL Modem: 192.168.3.2  
 
 **Routing:** Static or dynamic routing between subnets to ensure full connectivity.
 
@@ -84,7 +81,7 @@ Design and implement a small enterprise network with:
 
 2. **Head Office Server Configuration**
    - DHCP pool setup for staff devices
-   - DNS server mapping `starfumes → 192.168.1.3`
+   - DNS server mapping starfumes → 192.168.1.3
    - Web server setup (simple HTML page)
 
 3. **Router Configuration**
@@ -96,7 +93,7 @@ Design and implement a small enterprise network with:
 
 5. **Testing & Verification**
    - Ping between subnets (Layer 3)
-   - Access web server via IP & `starfumes` domain
+   - Access web server via IP & starfumes domain
    - Verify DHCP and DNS functionality
 
 ---
@@ -107,7 +104,7 @@ Design and implement a small enterprise network with:
 |-------------------|------------------------|----------|----------------|----------------|
 | Client PC 192.168.2.x | Head Office PC 192.168.1.x | PING     | Success        | Success        |
 | Client PC 192.168.2.x | Web Server 192.168.1.3    | HTTP     | Success        | Success        |
-| Client PC 192.168.2.x | Web Server `starfumes`    | DNS/HTTP | Success        | Success        |
+| Client PC 192.168.2.x | Web Server starfumes      | DNS/HTTP | Success        | Success        |
 
 ---
 
@@ -115,7 +112,7 @@ Design and implement a small enterprise network with:
 
 - **Routing Success:** Layer 3 connectivity verified between subnets
 - **DHCP Operation:** Dynamic IP assignment worked for all clients, including wireless devices
-- **DNS Validation:** Clients successfully accessed `starfumes` via DNS  
+- **DNS Validation:** Clients successfully accessed starfumes via DNS  
 - **Security & Segmentation:** Corporate services are isolated from client access, ready for future ACLs
 
 ---
